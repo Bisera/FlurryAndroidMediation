@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlurryMediatedAdsSampleApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="description">Flurry Mediated Ads Sample App</string>
+     <string name="flurry_api_key">JNWJW66W2CFGY7FKYTGY</string>
+    <string name="adSpaceName">MediatedBannerBottom</string>
+   <string name="adInterstitialSpaceName">MediatedTakeover</string>
+   
+    <string name="appSpot_admob_apikey">a15200338c4e30b</string>
+    <string name="appSpot_millennial_apikey">130154</string>
+    <string name="appSpot_millennial_apikey_interstitial">130155</string>
+    <string name="appSpot_millennial_apikey_rectangle">130156</string>
+    <string name="appSpot_inmobi_apikey">2edb07423766404ab6d5faab0b7f4dfb</string>
+    
+</resources>
