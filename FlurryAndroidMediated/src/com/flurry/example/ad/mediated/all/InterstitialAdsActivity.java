@@ -3,7 +3,6 @@ package com.flurry.example.ad.mediated.all;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
-
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -98,8 +97,8 @@ public class InterstitialAdsActivity extends Activity implements
 	}
 
 	@Override
-	public void onAdClicked(String arg0) {
-		Log.d(kLogTag, "onAdClicked( " + arg0 + " )");
+	public void onAdClicked(String adSpace) {
+		Log.d(kLogTag, "onAdClicked( " + adSpace + " )");
 		Toast toast = Toast.makeText(mContext, "onAdClicked",
 				Toast.LENGTH_SHORT);
 		toast.show();
@@ -107,16 +106,16 @@ public class InterstitialAdsActivity extends Activity implements
 	}
 
 	@Override
-	public void onAdClosed(String arg0) {
-		Log.d(kLogTag, "onAdClosed( " + arg0 + " )");
+	public void onAdClosed(String adSpace) {
+		Log.d(kLogTag, "onAdClosed( " + adSpace + " )");
 		Toast toast = Toast
 				.makeText(mContext, "onAdClosed", Toast.LENGTH_SHORT);
 		toast.show();
 	}
 
 	@Override
-	public void onAdOpened(String arg0) {
-		Log.d(kLogTag, "onAdOpened( " + arg0 + " )");
+	public void onAdOpened(String adSpace) {
+		Log.d(kLogTag, "onAdOpened( " + adSpace + " )");
 		Toast toast = Toast
 				.makeText(mContext, "onAdOpened", Toast.LENGTH_SHORT);
 		toast.show();
@@ -124,16 +123,16 @@ public class InterstitialAdsActivity extends Activity implements
 	}
 
 	@Override
-	public void onApplicationExit(String arg0) {
-		Log.d(kLogTag, "onApplicationExit( " + arg0 + " )");
+	public void onApplicationExit(String adSpace) {
+		Log.d(kLogTag, "onApplicationExit( " + adSpace + " )");
 		Toast toast = Toast.makeText(mContext, "onApplicationExit",
 				Toast.LENGTH_SHORT);
 		toast.show();
 	}
 
 	@Override
-	public void onRenderFailed(String arg0) {
-		Log.d(kLogTag, "onRenderFailed( " + arg0 + " )");
+	public void onRenderFailed(String adSpace) {
+		Log.d(kLogTag, "onRenderFailed( " + adSpace + " )");
 		Toast toast = Toast.makeText(mContext, "onRenderFailed",
 				Toast.LENGTH_SHORT);
 		toast.show();
@@ -143,8 +142,8 @@ public class InterstitialAdsActivity extends Activity implements
 	}
 
 	@Override
-	public void onVideoCompleted(String arg0) {
-		Log.d(kLogTag, "onVideoCompleted( " + arg0 + " )");
+	public void onVideoCompleted(String adSpace) {
+		Log.d(kLogTag, "onVideoCompleted( " + adSpace + " )");
 		Toast toast = Toast.makeText(mContext, "onVideoCompleted",
 				Toast.LENGTH_SHORT);
 		toast.show();
@@ -152,17 +151,24 @@ public class InterstitialAdsActivity extends Activity implements
 	}
 
 	@Override
-	public boolean shouldDisplayAd(String arg0, FlurryAdType arg1) {
-		Log.d(kLogTag, "shouldDisplayAd( " + arg0 + ", " + arg1 + " )");
+	public boolean shouldDisplayAd(String adSpace, FlurryAdType arg1) {
+		Log.d(kLogTag, "shouldDisplayAd( " + adSpace + ", " + arg1 + " )");
 		return true;
 	}
 
 	@Override
-	public void spaceDidFailToReceiveAd(String arg0) {
-		Log.d(kLogTag, "spaceDidFailToReceiveAd(" + arg0 + " )");
+	public void spaceDidFailToReceiveAd(String adSpace) {
+		Log.d(kLogTag, "spaceDidFailToReceiveAd(" + adSpace + " )");
 		Toast toast = Toast.makeText(mContext, "spaceDidFailToReceiveAd",
 				Toast.LENGTH_SHORT);
 		toast.show();
+	}
+
+	@Override
+	public void onRendered(String adSpace) {
+		Log.d(kLogTag, "onRendered( " + adSpace + " )");
+		
+		
 	}
 
 }
